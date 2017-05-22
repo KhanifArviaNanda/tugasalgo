@@ -1,0 +1,53 @@
+Nama 	: Khanif Arvia Nanda
+Kelas	: Teknik Informatika 16 A K
+NIM	: 16 111 295 
+1. 	Pada main program, Pertama kita membuat sebuah variabel data yang bertipe integer 
+	dengan ukuran tidak didefinisikan. Setelah itu kita isi array dengan 
+	beberapa angka secara acak atau stuktur (Ex. 5,10,15,20,25,30,35,40,45,50) - (Line 7)
+	
+3. 	Setelah itu, Kita membuat variabel  "cari" bertipe integer untuk menyimpan data	(angka) 
+	yang akan kita cari pada proses selanjutnya - (Line 8)
+  
+4.	Buat proses inputan pencarian yang akan di simpan pada variabel "cari" - (Line 12)
+
+5. 	Sebelumnya kita pernah membuat satu buah  variabel untuk insialisasi 
+	proses pengulangan (While) - (Line 16). Kita beri nilai pada variabel tsb berupa angka 	0, 
+	di karenakan pada setiap proses pengulangan 
+	kita memulai dari titik awal dan titik awal tersebut adalah angka 0.
+
+6. 	Dikarenakan kita tidak mengetahui
+	ukuran array pada angka yang akan kita cari di dalam array. kita gunakan fungsi :
+	
+	[mencari ukuran array]	
+	------- sizeof(data) - sizeof(*data) = Ukuran dari variabel "data" - (Line 16) -----------
+	
+
+7. 	Setelah kita mengetahui ukuran array maka selanjutnya kita akan mencari angka yg akan 	di cari.
+	Disini kita melakukan proses pengulangan mengunakan while 
+
+	while ( ia < sizeof(data) / sizeof(*data) && data[ia] != cari) ia++; - (Line 16)
+	
+	Ket :
+	Ketika ia (titik awal inisial) yaitu 0 lebih kecil dari [ukuran array] dan isi dari data[ia]
+	/isi dari data0] tidak sama dengan angka yang kita cari maka nilai ia+1 akan terus diulang. 
+	Jika  kita mencari angka 3 pada variabel "data". Proses ini akan mencari terlebih dahulu isi 
+	data[0] - data[~]/[Max. ukuran data] apakah sama dengan apa yang kita cari. 
+	
+	Ex. Kita mencari angka 3. Disini angka 3 terdapat 
+	pada data[1] maka kita telah mendapatkan nilai [ia] yakni [1]
+	proses ini akan berlanjut pada langkah selanjutnya.
+
+8. 	Setelah nilai pada data[ia] sama dengan nilai cari, Selanjutnya Kita akan menampilkan 
+	lokasi angka yang kita cari tsb. terdaftar pada ukuran array yang keberapa. Maka kita beri fungsi
+
+	if ( ia != sizeof(data) / sizeof(*data)) - (Line 19)
+
+	Ket : Jika nilai ia tidak sama dengan ukuran data maka proses ini akan menampilkan lokasi 
+	array pada angka yang telah kita cari, nilai ia dibandingkan dengan ukuran array karena menutupi
+	terjadinya error dalam menampilkan hasil.
+
+9. 	Menampilkan lokasi data pada angka yang kita cari, dan menampilkan isi data apakah sama
+	dengan angka yang kita cari atau bukan - (Line 21 - 22)
+
+10. 	Jika nilai ia error atau nilai yang kita cari tidak terdapat pada data 
+	maka akan menampilkan hasil error. - (Line 27)
